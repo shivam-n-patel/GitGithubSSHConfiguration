@@ -6,7 +6,7 @@ Follow the steps below to generate and configure an SSH key for secure authentic
 Run the following command to generate an SSH key using the `ed25519` algorithm:
 
 ```sh
-ssh-keygen -t ed25519 -C "shivam.patel@shrimtechnolab.in" -f ~/.ssh/ShrimShivamPatel
+ssh-keygen -t ed25519 -C "<your@email.com>" -f ~/.ssh/<username>
 ```
 
 - When prompted for a passphrase, **press Enter** (leaving it empty).
@@ -28,7 +28,7 @@ eval "$(ssh-agent -s)"
 Add the newly created SSH key to the agent:
 
 ```sh
-ssh-add ~/.ssh/ShrimShivamPatel
+ssh-add ~/.ssh/<username>
 ```
 
 Verify that the key has been added successfully:
@@ -41,7 +41,7 @@ ssh-add -l
 Retrieve the public key:
 
 ```sh
-cat ~/.ssh/ShrimShivamPatel.pub
+cat ~/.ssh/<ShrimShivamPatel>.pub
 ```
 
 Copy the output and add it to your GitHub account under:
@@ -58,10 +58,10 @@ nano ~/.ssh/config
 Add the following lines:
 
 ```sh
-Host ShrimShivamPatel
+Host <username>
     Hostname github.com
     User git
-    IdentityFile ~/.ssh/ShrimShivamPatel
+    IdentityFile ~/.ssh/<ShrimShivamPatel>
 ```
 
 Save and exit (in nano, press **CTRL + X**, then **Y**, then **Enter**).
@@ -70,7 +70,7 @@ Save and exit (in nano, press **CTRL + X**, then **Y**, then **Enter**).
 Verify the SSH connection with GitHub:
 
 ```sh
-ssh -T git@ShrimShivamPatel
+ssh -T git@<username>
 ```
 
 If everything is set up correctly, you should see a success message confirming authentication.
