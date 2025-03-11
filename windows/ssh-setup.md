@@ -13,7 +13,7 @@ Press **Win + X** → Click **Windows Terminal (Admin)** or **PowerShell (Admin)
 Run the following command to generate an SSH key using the `ed25519` algorithm:
 
 ```powershell
-ssh-keygen -t ed25519 -C "<your@email.com>" -f C:\Users\%USERNAME%\.ssh\<username>
+ssh-keygen -t ed25519 -C "<github-email-id>" -f C:\Users\%USERNAME%\.ssh\<github-username>
 ```
 
 - When prompted for a **passphrase**, **press Enter** (leave it empty).
@@ -37,7 +37,7 @@ Set-Service -Name ssh-agent -StartupType Automatic
 
 ### **Step 2: Add the SSH Key**
 ```powershell
-ssh-add C:\Users\%USERNAME%\.ssh\<username>
+ssh-add C:\Users\%USERNAME%\.ssh\<github-username>
 ```
 
 ### **Step 3: Verify Key Addition**
@@ -51,7 +51,7 @@ ssh-add -l
 
 ### **Step 1: Retrieve the Public Key**
 ```powershell
-Get-Content C:\Users\%USERNAME%\.ssh\<username>.pub
+Get-Content C:\Users\%USERNAME%\.ssh\<github-username>.pub
 ```
 
 ### **Step 2: Copy the Output and Add It to GitHub**
@@ -75,7 +75,7 @@ notepad C:\Users\%USERNAME%\.ssh\config
 Host <username>
     Hostname github.com
     User git
-    IdentityFile C:\Users\%USERNAME%\.ssh\<username>
+    IdentityFile C:\Users\%USERNAME%\.ssh\<github-username>
 ```
 
 ---
@@ -84,7 +84,7 @@ Host <username>
 
 Run the following command:
 ```powershell
-ssh -T git@<username>
+ssh -T git@<github-username>
 ```
 
 If everything is set up correctly, you should see a message confirming authentication:
