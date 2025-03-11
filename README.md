@@ -41,7 +41,7 @@ ssh-add -l
 Retrieve the public key:
 
 ```sh
-cat ~/.ssh/<ShrimShivamPatel>.pub
+cat ~/.ssh/<username>.pub
 ```
 
 Copy the output and add it to your GitHub account under:
@@ -61,7 +61,7 @@ Add the following lines:
 Host <username>
     Hostname github.com
     User git
-    IdentityFile ~/.ssh/<ShrimShivamPatel>
+    IdentityFile ~/.ssh/<username>
 ```
 
 Save and exit (in nano, press **CTRL + X**, then **Y**, then **Enter**).
