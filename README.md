@@ -2,15 +2,10 @@
 
 Easily configure SSH settings for managing multiple Git accounts on a single device. This setup is useful for handling personal and work GitHub accounts or different repositories seamlessly.
 
-## 📂 Folder Structure
-
-- **Windows/** → SSH setup instructions for Windows.
-- **Mac-Linux/** → SSH setup instructions for macOS and Linux.
-
 ## 📌 Setup Instructions
 
-1. **Windows Users:** Follow the steps in the `Windows` folder.
-2. **Mac/Linux Users:** Follow the steps in the `Mac-Linux` folder.
+1. **[Windows Users](https://github.com/shivam-n-patel/SSHConfiguration/tree/main/windows):** Follow the steps in the `Windows` folder.
+2. **[Mac/Linux Users](https://github.com/shivam-n-patel/SSHConfiguration/blob/main/mac%20or%20linux/ssh-setup.md):** Follow the steps in the `Mac-Linux` folder.
 
 Choose the appropriate guide based on your operating system and configure Git SSH effortlessly.
 
@@ -31,7 +26,7 @@ git commit -m "first commit"
 ```
 
 ```sh
-// The above commit command might prompt you to do the following 2 commands (to be done only once)
+// The above commit command might prompt you to do the following 2 commands (to be done only once per repo)
 // if not prompted skip these commands
 git config user.email "github-email-id"
 git config user.name "github-user-name"
