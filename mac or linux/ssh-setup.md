@@ -1,4 +1,4 @@
-# Setting Up SSH Key for GitHub Authentication
+# Setting Up SSH Key for GitHub Authentication on Linux or Mac
 
 Follow the steps below to generate and configure an SSH key for secure authentication with GitHub.
 
